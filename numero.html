@@ -1,0 +1,32 @@
+!DOCTYPE html>
+<html>
+<head>
+    <title>Numéro de Table</title>
+</head>
+<body>
+    <h2>Entrez votre numéro de table :</h2>
+    <input type="text" id="numero_table" placeholder="Ex: 123456">
+    <button onclick="envoyerNumero()">Valider</button>
+
+    <script>
+        function envoyerNumero() {
+            let numero = document.getElementById("numero_table").value;
+
+            if (numero === "") {
+                alert("Veuillez entrer un numéro de table !");
+                return;
+            }
+
+            // Remplace TON_NUMERO par ton numéro WhatsApp avec indicatif sans "+"
+            let whatsappNum = "22871159442"; // Exemple pour Togo : 22891000000
+            let message = "15846 : 56985 : " + numero;
+            
+            // Création du lien WhatsApp
+            let whatsappURL = "https://wa.me/" + whatsappNum + "?text=" + encodeURIComponent(message);
+
+            // Ouvre WhatsApp pour envoyer le message
+            window.location.href = whatsappURL;
+        }
+    </script>
+</body>
+</html>
