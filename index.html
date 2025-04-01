@@ -1,128 +1,96 @@
-<!doctype html>
-<html lang="en">
- <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-  <meta name="description" content="Consultation du statut du traitement de demande de bourse">
-  <title> Consultation DBS </title><!-- Favicons--> <!-- GOOGLE WEB FONT -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet"><!-- BASE CSS -->
-  <link href="/themes/quote/css/animate.min.css" rel="stylesheet">
-  <link href="/themes/quote/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/themes/quote/css/style.css" rel="stylesheet">
-  <link href="/themes/quote/css/icon_fonts/css/all_icons_min.css" rel="stylesheet">
-  <link href="/themes/quote/css/magnific-popup.min.css" rel="stylesheet">
-  <link href="/themes/quote/css/skins/square/yellow.css" rel="stylesheet"><!-- YOUR CUSTOM CSS -->
-  <link href="/themes/quote/css/custom.css" rel="stylesheet">
- </head>
- <body>
-  <div id="loader_form">
-   <div data-loader="circle-side-2"></div>
-  </div><!-- /Loader_form -->
-  <header>
-   <a id="menu-button-mobile" class="cmn-toggle-switch cmn-toggle-switch__htx" href="javascript:void(0);"> <span>Menu mobile</span></a>
-   <nav class="main_nav">
-    <ul class="nav nav-tabs">
-     <li><a href="/" class="active show">Accueil</a></li>
+<!DOCTYPE html><html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Université Excellence</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            background-color: #34495e;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 40px;
+            text-align: center;
+            background-color: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Université Excellence</h1>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#formations">Formations</a></li>
+                <li><a href="#admissions">Admissions</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header><section id="accueil">
+    <h2>Bienvenue à l'Université Excellence</h2>
+    <p>Une institution dédiée à l'enseignement supérieur et à l'excellence académique.</p>
+</section>
+
+<section id="formations">
+    <h2>Nos Formations</h2>
+    <ul>
+        <li>Médecine</li>
+        <li>Ingénierie</li>
+        <li>Droit</li>
+        <li>Sciences économiques</li>
     </ul>
-   </nav>
-  </header><!-- /header -->
-  <div id="main_container" class="visible">
-   <div id="header_in">
-    <div id="logo_in">
-     <img src="/media/img/logo_tzpro.png" style="margin-top: -20px;height: 70px;margin-bottom: -20px;" data-retina="true" alt="Quote">
-    </div>
-   </div>
-   <div class="wrapper_in">
-    <div class="container-fluid">
-     <div class="tab-content">
-      <div class="tab-pane fade show active" id="tab_1">
-       <div class="subheader" id="quote"></div>
-       <div class="row">
-        <aside class="col-xl-3 col-lg-4">
-         <h2>Processus de consutation du statut bourse</h2>
-         <p class="lead">Actions à effectuer.</p>
-         <ul class="list_ok">
-          <li><b>Choisir l'université de provenance</b><br></li>
-          <li><b> Renseigner le numero de Table</b><br></li>
-          <li><b> Renseigner l'année d'étude</b><br></li>
-         </ul>
-        </aside><!-- /aside -->
-        <div class="col-xl-9 col-lg-8">
-         <div id="wizard_container">
-          <div id="top-wizard"></div><!-- /top-wizard -->
-          <form name="consultation" method="post" action="/consultation">
-           <input id="website" name="website" type="text" value=""> <!-- Leave for security protection, read docs for details -->
-           <div id="middle-wizard">
-            <div class="submit step">
-             <h3 class="main_question">Remplir le formulaire de consultation</h3>
-             <div class="row">
-              <div class="col-lg-12">
-               <div class="form-group select">
-                <label>Université:</label>
-                <div class="styled-select">
-                 <select id="consultation_universite" name="consultation[universite]" class="form-contro"><option value="1">UL (Université de LOME)</option><option value="2">UK (Université de KARA)</option></select>
-                </div>
-               </div><!-- /select-->
-              </div>
-              <div class="col-lg-12">
-               <div class="form-group select">
-                <label>Numero de Table</label> <input type="text" id="consultation_carte" name="consultation[carte]" required class="form-control">
-               </div><!-- /select-->
-              </div>
-              <div class="col-lg-12">
-               <div class="form-group select">
-                <label>Année Scolaire:</label>
-                <div class="styled-select">
-                 <select id="consultation_annee" name="consultation[annee]" class="form-contro"><option value="8">2024-2025</option><option value="7">2023-2024</option><option value="6">2022 - 2023</option><option value="5">2021-2022</option><option value="2">2019 - 2020</option><option value="1">2020 - 2021</option></select>
-                </div>
-               </div><!-- /select-->
-              </div>
-             </div>
-            </div><!-- /step 4-->
-           </div><!-- /middle-wizard -->
-           <div id="bottom-wizard">
-            <button type="submit" name="process" class="submit">Valider</button>
-           </div><!-- /bottom-wizard --> <input type="hidden" id="consultation__token" name="consultation[_token]" value="ycrwSBXd_nE-pDR9ulvHEJSKNLzwJmuxNdRm86PTeJI">
-          </form>
-         </div><!-- /Wizard container -->
-        </div><!-- /col -->
-       </div><!-- /row -->
-      </div><!-- /TAB 3:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
-     </div><!-- /tab content -->
-    </div><!-- /container-fluid -->
-   </div><!-- /wrapper_in -->
-  </div><!-- /main_container -->
-  <div id="additional_links">
-   <ul>
-    <li>© 2018 Quote</li>
-    <li><a href="#0" class="animated_link">Purchase this template</a></li>
-    <li><a href="index_2.html" class="animated_link">Demo Slider</a></li>
-    <li><a href="index_3.html" class="animated_link">With UPLOAD</a></li>
-    <li><a href="index_4.html" class="animated_link">With Branch</a></li>
-    <li><a href="index_5.html" class="animated_link">Full Page View</a></li>
-    <li><a href="shortcodes.html" class="animated_link">Shortcodes</a></li>
-   </ul>
-  </div><!-- /add links --> <!-- Modal terms -->
-  <div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-     <div class="modal-header">
-      <h5 class="modal-title">Terms and conditions</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
-     </div>
-     <div class="modal-body">
-      <p>Lorem ipsum dolor sit amet, in porro albucius qui, in <strong>nec quod novum accumsan</strong>, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
-      <p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. Lorem ipsum dolor sit amet, <strong>in porro albucius qui</strong>, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
-      <p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
-     </div>
-     <div class="modal-footer">
-      <button type="button" class="btn_1" data-dismiss="modal">Close</button>
-     </div>
-    </div><!-- /.modal-content -->
-   </div><!-- /.modal-dialog -->
-  </div><!-- /.modal --> <!-- SCRIPTS --> <!-- Jquery-->
-  <script src="/themes/quote/js/jquery-3.2.1.min.js"></script><!-- Common script -->
-  <script src="/themes/quote/js/common_scripts_min.js"></script><!-- Theme script -->
-  <script src="/themes/quote/js/functions_no_side_panel.js"></script><!-- Google map -->
- </body>
+</section>
+
+<section id="admissions">
+    <h2>Admissions</h2>
+    <p>Découvrez nos procédures d'admission et rejoignez notre communauté.</p>
+</section>
+
+<section id="contact">
+    <h2>Contactez-nous</h2>
+    <p>Email : contact@universite-excellence.com</p>
+    <p>Téléphone : +228 90000000</p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Université Excellence. Tous droits réservés.</p>
+</footer>
+
+</body>
 </html>
